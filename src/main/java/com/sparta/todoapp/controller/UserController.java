@@ -6,8 +6,6 @@ import com.sparta.todoapp.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,5 +24,4 @@ public class UserController {
     public ResponseEntity<SignupResponseDto> signup(@Valid SignupRequestDto requestDto) {
         return userService.signup(requestDto);
     }
-
 }
